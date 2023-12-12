@@ -9,7 +9,6 @@ const Home = () => {
   const { isLogin, token } = useSelector((state) => state.auth);
   const fetchUser = async () => {
     const response = await apiGetUser(token);
-    console.log(response);
   };
   useEffect(() => {
     token && fetchUser();
